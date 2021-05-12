@@ -8,11 +8,6 @@ class GameViewModel: ViewModel() {
         const val TAG = "Game Fragment"
     }
 
-    init {
-        Log.d(TAG, "GameViewModel created")
-        getNextWord()
-    }
-
     // List of words used in the game
     private var wordsList: MutableList<String> = mutableListOf()
     private lateinit var currentWord: String
@@ -22,6 +17,11 @@ class GameViewModel: ViewModel() {
     private var _score = 0
     private var _currentWordCount = 0
     private lateinit var _currentScrambledWord: String
+
+    init {
+        Log.d(TAG, "GameViewModel created")
+        getNextWord()
+    }
 
     /**
      * Backing properties
